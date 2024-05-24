@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: springcloud/eureka
+    container_name: eureka-server
+    ports:
+      - '8761:8761'
+    networks:
+      - pg-network
+
+# Another services
+
+volumes:
+  db:
+    driver: local
+
+networks:
+  pg-network:
+
+
